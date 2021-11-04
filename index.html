@@ -1,18 +1,34 @@
 <HTML>
 
 <HEAD>
+<header style="height: auto; width: 100%; background-color: #333; text-align: center;">
+ 
+ <h1 style="color: white;">Aurora Cloud Forecast</h1>
+</header>
 
-<TITLE>forecaster25 test site</TITLE>
 
 </HEAD>
 
-<h1>Test Web Map</h1>
   
 <iframe src="https://forecaster25.github.io/TestMap/" title="Web Map Test" width="100%" height="700" style="border:none;"></iframe>
 
-Map by Peter Forister
-<HR>
+<footer style="width: 100%; height: auto; background-color: #333; text-align: center;">
+  <p style="color: white;">Web Map by Peter Forister, Copyright November 2021</p>
+  
+<p> Forecast time valid for <span id="clock"></span><p>
+ 
+</footer>
 
 </BODY>
 
 </HTML>
+
+<script type="text/javascript">
+    var clockElement = document.getElementById('clock');
+
+    function clock() {
+        clockElement.textContent = new Date().toString();
+    }
+
+    setInterval(clock, 1000);
+</script>
